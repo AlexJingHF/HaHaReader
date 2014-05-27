@@ -1,5 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">HaHaReader</string>
+    <string name="title_activity_welcome">Welcome</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_text">O(∩_∩)O哈哈~每一天</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>
