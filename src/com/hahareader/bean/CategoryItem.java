@@ -37,6 +37,11 @@ public class CategoryItem implements Serializable
 	 */
 	private Integer selected;
 
+	public CategoryItem()
+	{
+
+	}
+
 	public CategoryItem(int id, String name, int orderId, int selected)
 	{
 		this.id = Integer.valueOf(id);

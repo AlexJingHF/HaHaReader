@@ -1,7 +1,85 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hahareader.MainActivity"
-    tools:ignore="MergeRootFrame" />
+    android:background="@color/activity_bg_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_column"
+            android:layout_width="0dip"
+            android:layout_height="40.0dip"
+            android:layout_weight="1.0" >
+
+            <com.hahareader.view.TitleHorizontalScrollView
+                android:id="@+id/mTitleHorizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dip"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/ll_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip" >
+                </LinearLayout>
+            </com.hahareader.view.TitleHorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/left_shape"
+                android:layout_width="10.0dip"
+                android:layout_height="40.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/channel_leftblock"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/right_shape"
+                android:layout_width="10.0dip"
+                android:layout_height="40.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/channel_rightblock"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_more"
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip" >
+
+            <ImageView
+                android:id="@+id/button_more_columns"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:src="@drawable/selector_add_category" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/gray" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

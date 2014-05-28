@@ -9,6 +9,7 @@
         android:targetSdkVersion="19" />
 
     <application
+        android:name="com.hahareader.application.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -26,6 +27,13 @@
             android:name="com.hahareader.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
+        <activity
+            android:name="com.hahareader.CategoryActivity"
+            android:label="@string/title_activity_category" >
+        </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
